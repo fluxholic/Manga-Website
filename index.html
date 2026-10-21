@@ -94,7 +94,7 @@ nav.tabs svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2
 const TAX=/*TAX*/{"types":["Manga","Manhwa","Manhua","Webtoon","Western comic","Graphic novel","Light novel"],
 "genres":["Action","Adventure","Fantasy","Dark Fantasy","Martial Arts","Cultivation","Murim","Regression","Reincarnation","Isekai","Dungeon","System","Leveling","Overpowered Protagonist","Academy","Magic","Romance","Comedy","Drama","Thriller","Horror","Mystery","Psychological","Sci-Fi","Supernatural","Sports","Historical","Harem","Slice of Life"],
 "tags":["Slow burn","Found family","Time loop","Tournament arc","Antihero","Villainess","Workplace","Post-apocalyptic","Cozy","Revenge"]}/*END*/;
-const DATA=RAW.map((r,i)=>({id:i+1,t:r[0],type:r[1],genres:r[2],tags:r[3],s:r[4],y:r[5],r:r[6],upd:r[7],added:r[8],pop:r[9],h:(i*53)%360}));
+let DATA=RAW.map((r,i)=>({id:i+1,t:r[0],type:r[1],genres:r[2],tags:r[3],s:r[4],y:r[5],r:r[6],upd:r[7],added:r[8],pop:r[9],h:(i*53)%360}));
 const SECTIONS=[
  {title:"Trending",note:"sample ranking",pick:d=>[...d].sort((a,b)=>b.pop-a.pop)},
  {title:"Popular",note:"sample ratings",pick:d=>[...d].sort((a,b)=>b.r-a.r)},
