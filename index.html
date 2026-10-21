@@ -1,160 +1,202 @@
-<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="color-scheme" content="dark"><meta name="theme-color" content="#0b0b0d"><title>Yomira – homepage preview</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<style>:root{--bg:#0b0b0d;--surface:#141417;--raised:#1c1c21;--line:#2a2a30;--text:#f4f4f5;--muted:#9a9aa3;--red:#e11d2e;--red-d:#b4141f;
---display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--body:'Figtree','Segoe UI',system-ui,sans-serif;box-sizing:border-box;color-scheme:dark;padding-top:env(safe-area-inset-top,0px)}
-html{scroll-padding-top:env(safe-area-inset-top,0px)}
-*,*::before,*::after{box-sizing:inherit}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="dark">
+<meta name="theme-color" content="#0b0b0d">
+<meta name="description" content="Discover manga, manhwa, and graphic novels on Yomira.">
+<title>Yomira — Manga Discovery</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0b0b0d;--surface:#141417;--raised:#1c1c21;--line:#2a2a30;--text:#f4f4f5;--muted:#9a9aa3;--red:#e11d2e;--red-d:#b4141f;--display:'Bricolage Grotesque','Segoe UI',system-ui,sans-serif;--body:'Figtree','Segoe UI',system-ui,sans-serif;box-sizing:border-box;color-scheme:dark;padding-top:env(safe-area-inset-top,0px)}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}*,*::before,*::after{box-sizing:inherit}
 body{margin:0;background:var(--bg);color:var(--text);font:400 16px/1.5 var(--body);padding-bottom:calc(76px + env(safe-area-inset-bottom,0px));-webkit-tap-highlight-color:transparent}
-button,input,select{font:inherit;color:inherit}
-:focus-visible{outline:2px solid #fff;outline-offset:2px}
-.wrap{max-width:1120px;margin:0 auto;padding:0 16px}
-.banner{background:#1a0c0e;color:#ffb4ba;font-size:13px;padding:8px 16px;text-align:center;border-bottom:1px solid #3a1519}
+button,input,select{font:inherit;color:inherit}button{touch-action:manipulation}:focus-visible{outline:2px solid #fff;outline-offset:2px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 16px}.banner{background:#1a0c0e;color:#ffb4ba;font-size:12px;padding:8px 16px;text-align:center;border-bottom:1px solid #3a1519}
 header{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:rgba(11,11,13,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-header .wrap{display:flex;align-items:center;gap:12px;height:58px}
-.logo{font:800 23px var(--display);letter-spacing:-.02em;display:flex;align-items:center;gap:8px;background:none;border:0;cursor:pointer;padding:0}
+header .wrap{display:flex;align-items:center;gap:12px;min-height:62px}.logo{font:800 23px var(--display);letter-spacing:-.02em;display:flex;align-items:center;gap:8px;background:none;border:0;cursor:pointer;padding:0;white-space:nowrap}
 .logo i{width:26px;height:26px;border-radius:7px;background:var(--red);display:grid;place-items:center;font:800 16px var(--display);font-style:normal;color:#fff}
-.search{flex:1;max-width:440px;margin-left:auto}
-.search input{width:100%;height:40px;border-radius:20px;border:1px solid var(--line);background:var(--surface);padding:0 16px}
-.search input::placeholder{color:var(--muted)}
-.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0;scrollbar-width:none}
-.chips.wrapped{flex-wrap:wrap;overflow:visible}
-.chip{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:18px;min-height:36px;padding:0 14px;cursor:pointer;color:var(--muted)}
-.chip:hover{border-color:var(--red);color:var(--text)}
-.chip[aria-pressed=true]{background:var(--red);border-color:var(--red);color:#fff}
-.hero{margin:14px 0 8px;border-radius:18px;border:1px solid var(--line);position:relative;overflow:hidden;min-height:280px;display:flex;align-items:flex-end;padding:22px;background:linear-gradient(180deg,rgba(11,11,13,0) 30%,#0b0b0d 100%),#17171b}
-.hero::before{content:"Y";position:absolute;right:-10px;top:-50px;font:800 300px/1 var(--display);color:#1f1f24}
-.hero-in{position:relative;max-width:520px}
-.hero small{color:var(--red);font-weight:600}
-.hero h1{font:800 clamp(34px,8vw,54px)/1.02 var(--display);letter-spacing:-.03em;margin:6px 0 10px}
-.hero p{color:#c9c9d0;margin:0 0 16px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 18px;border-radius:21px;border:0;background:var(--red);color:#fff;font-weight:600;cursor:pointer}
-.btn:hover{background:var(--red-d)}
-.btn.ghost{background:transparent;border:1px solid var(--line);color:var(--text);margin-left:8px}
-.btn[disabled]{opacity:.5;cursor:not-allowed}
-section{margin:26px 0}
-.sh{display:flex;align-items:baseline;justify-content:space-between;margin-bottom:12px}
-.sh h2{font:700 21px var(--display);margin:0;letter-spacing:-.01em;border-left:3px solid var(--red);padding-left:10px}
-.sh span{color:var(--muted);font-size:13px}
-.row{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none}
-.row .card{flex:none;width:132px}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:14px}
-.card{display:block;text-align:left;background:none;border:0;padding:0;cursor:pointer}
-.cover{aspect-ratio:2/3;border-radius:10px;overflow:hidden;padding:10px;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);transition:border-color .15s}
-.card:hover .cover{border-color:var(--red)}
-.cover b{font:800 16px/1.1 var(--display);letter-spacing:-.01em}
-.tag{align-self:flex-start;background:rgba(0,0,0,.6);border-radius:5px;font-size:11px;padding:2px 7px;font-weight:600}
-.meta{margin-top:7px;font-size:13px;color:var(--muted)}
-.meta strong{display:block;color:var(--text);font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}
-.panel h3{font:700 15px var(--body);margin:12px 0 8px;color:var(--muted)}
-.panel h3:first-child{margin-top:0}
-.fr{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px}
-select{background:var(--raised);border:1px solid var(--line);border-radius:10px;min-height:38px;padding:0 10px}
-.link{background:none;border:0;color:var(--red);cursor:pointer;padding:8px 0;font-weight:600}
-.empty{background:var(--surface);border:1px dashed var(--line);border-radius:14px;padding:22px;color:var(--muted)}
-.empty .btn{margin-top:12px}
-.bar{height:4px;background:var(--line);border-radius:2px;margin-top:10px;overflow:hidden}
-.bar span{display:block;height:100%;background:var(--red)}
-nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:6;background:rgba(11,11,13,.96);border-top:1px solid var(--line);display:flex;padding-bottom:env(safe-area-inset-bottom,0px)}
+.search{flex:1;max-width:480px;margin-left:auto}.search input{width:100%;height:40px;border-radius:20px;border:1px solid var(--line);background:var(--surface);padding:0 16px}.search input::placeholder{color:var(--muted)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:4px 0;scrollbar-width:none}.chips::-webkit-scrollbar,.row::-webkit-scrollbar{display:none}.chips.wrapped{flex-wrap:wrap;overflow:visible}
+.chip{flex:none;border:1px solid var(--line);background:var(--surface);border-radius:18px;min-height:36px;padding:0 14px;cursor:pointer;color:var(--muted)}.chip:hover{border-color:var(--red);color:var(--text)}.chip[aria-pressed=true]{background:var(--red);border-color:var(--red);color:#fff}
+.hero{margin:14px 0 8px;border-radius:18px;border:1px solid var(--line);position:relative;overflow:hidden;min-height:290px;display:flex;align-items:flex-end;padding:22px;background:linear-gradient(180deg,rgba(11,11,13,.05) 15%,rgba(11,11,13,.97) 100%),#17171b center/cover no-repeat}
+.hero::before{content:"Y";position:absolute;right:-10px;top:-50px;font:800 300px/1 var(--display);color:rgba(255,255,255,.04);pointer-events:none}.hero-in{position:relative;max-width:560px}.hero small{color:#ff6470;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+.hero h1{font:800 clamp(34px,8vw,54px)/1.02 var(--display);letter-spacing:-.03em;margin:6px 0 10px}.hero p{color:#dedee3;margin:0 0 16px;max-width:500px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 18px;border-radius:21px;border:0;background:var(--red);color:#fff;font-weight:600;cursor:pointer}.btn:hover{background:var(--red-d)}.btn.ghost{background:rgba(10,10,12,.5);border:1px solid #555;color:var(--text);margin-left:8px}.btn[disabled]{opacity:.5;cursor:not-allowed}
+section{margin:26px 0}.sh{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:12px}.sh h2{font:700 21px var(--display);margin:0;letter-spacing:-.01em;border-left:3px solid var(--red);padding-left:10px}.sh span{color:var(--muted);font-size:12px}
+.row{display:flex;gap:12px;overflow-x:auto;padding-bottom:8px;scrollbar-width:none}.row .card{flex:none;width:132px}.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(132px,1fr));gap:14px}
+.card{display:block;text-align:left;background:none;border:0;padding:0;cursor:pointer;min-width:0}.cover{aspect-ratio:2/3;border-radius:10px;overflow:hidden;position:relative;display:flex;flex-direction:column;justify-content:space-between;border:1px solid var(--line);background:linear-gradient(160deg,#28282e,#101013);transition:border-color .15s;background-position:center;background-size:cover}
+.card:hover .cover{border-color:var(--red)}.cover::after{content:"";position:absolute;inset:40% 0 0;background:linear-gradient(transparent,rgba(0,0,0,.85));pointer-events:none}.cover .tag,.cover b{position:relative;z-index:1}.cover b{font:800 15px/1.1 var(--display);letter-spacing:-.01em;padding:10px;overflow-wrap:anywhere;text-shadow:0 1px 6px #000}
+.tag{align-self:flex-start;margin:8px;background:rgba(0,0,0,.72);border-radius:5px;font-size:10px;padding:3px 7px;font-weight:700;max-width:calc(100% - 16px)}
+.meta{margin-top:7px;font-size:12px;color:var(--muted)}.meta strong{display:block;color:var(--text);font-weight:600;font-size:14px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;margin:12px 0}.panel h3{font:700 15px var(--body);margin:12px 0 8px;color:var(--muted)}.panel h3:first-child{margin-top:0}
+.fr{display:flex;gap:10px;flex-wrap:wrap;margin-top:12px;align-items:center}select{background:var(--raised);border:1px solid var(--line);border-radius:10px;min-height:38px;padding:0 10px;max-width:100%}
+.link{background:none;border:0;color:#ff5967;cursor:pointer;padding:8px 0;font-weight:600}.empty{background:var(--surface);border:1px dashed var(--line);border-radius:14px;padding:22px;color:var(--muted)}.empty .btn{margin-top:12px}
+.bar{height:4px;background:var(--line);border-radius:2px;margin-top:10px;overflow:hidden}.bar span{display:block;height:100%;background:var(--red)}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;z-index:6;background:rgba(11,11,13,.97);border-top:1px solid var(--line);display:flex;padding-bottom:env(safe-area-inset-bottom,0px)}
 nav.tabs button{flex:1;background:none;border:0;min-height:56px;color:var(--muted);cursor:pointer;font-size:12px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;border-top:2px solid transparent}
-nav.tabs button[aria-current=page]{color:var(--red);border-top-color:var(--red)}
-nav.tabs svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.dialog-back{position:fixed;inset:0;background:rgba(0,0,0,.7);display:none;align-items:flex-end;justify-content:center;z-index:20}
-.dialog-back.on{display:flex}
-.sheet{background:var(--surface);border-radius:20px 20px 0 0;max-width:520px;width:100%;padding:22px 20px calc(22px + env(safe-area-inset-bottom,0px));border:1px solid var(--line)}
-.sheet h3{font:800 26px var(--display);margin:0 0 4px}
-.sheet dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:14px 0;color:var(--muted)}
-.sheet dd{margin:0;color:var(--text)}
-.note{font-size:13px;color:var(--muted);margin-top:12px}
-@media(min-width:700px){.row .card{width:156px}.hero{min-height:340px;padding:34px}}
-@media(prefers-reduced-motion:reduce){*{transition:none!important}}
-</style></head><body>
-<div class="banner">Preview build. Every title, cover, date and number is invented sample data, not a real catalog.</div>
-<header><div class="wrap"><button class="logo" aria-label="Yomira home"><i>Y</i>Yomira</button><label class="search"><span style="position:absolute;left:-9999px">Search sample titles</span><input id="q" type="search" placeholder="Search titles, genres, tags" autocomplete="off"></label></div></header>
-<main class="wrap" id="main"></main><nav class="tabs" id="tabs" aria-label="Primary"></nav>
-<div class="dialog-back" id="dlg" role="dialog" aria-modal="true" aria-label="Title details"><div class="sheet" id="sheet"></div></div>
-<script>const RAW=/*DATA*/[
-["Lantern Tide","Manga",["Fantasy","Mystery","Supernatural"],["Slow burn"],"Ongoing",2024,4.6,2,40,95],
-["The Cartographer of Ash","Manhwa",["Adventure","Dark Fantasy","Dungeon","Leveling"],["Antihero"],"Ongoing",2023,4.5,1,300,98],
-["Neon Parish","Webtoon",["Sci-Fi","Thriller","Psychological"],["Post-apocalyptic"],"Ongoing",2025,4.2,3,20,70],
-["Salt & Static","Western comic",["Slice of Life","Drama","Comedy"],["Cozy"],"Completed",2021,4.4,400,900,40],
-["Hollow Crown Academy","Manhua",["Academy","Magic","Action","Overpowered Protagonist"],["Tournament arc"],"Ongoing",2022,4.1,5,200,85],
-["Quiet Orbit","Manga",["Sci-Fi","Slice of Life","Drama"],["Slow burn","Found family"],"Completed",2020,4.7,500,1000,60],
-["Paper Wolves","Graphic novel",["Action","Drama","Historical"],["Revenge"],"Hiatus",2019,3.9,260,1500,35],
-["Mistral Court","Manhwa",["Romance","Drama","Historical","Reincarnation"],["Villainess"],"Ongoing",2025,4.3,4,15,90],
-["Ninefold Station","Manga",["Mystery","Horror","Psychological"],["Time loop"],"Completed",2018,4.5,700,1200,55],
-["Rust Garden","Webtoon",["Slice of Life","Fantasy","Comedy"],["Cozy"],"Ongoing",2024,4.0,6,30,50],
-["Kite Season","Manhua",["Adventure","Sports","Comedy"],["Found family"],"Completed",2022,4.2,350,600,45],
-["Obsidian Choir","Manga",["Horror","Dark Fantasy","Supernatural"],["Antihero"],"Ongoing",2026,4.4,1,6,88],
-["Iron Lotus Ascent","Manhua",["Martial Arts","Cultivation","Action"],["Revenge","Tournament arc"],"Ongoing",2023,4.3,2,120,92],
-["Thirteenth Murim Gate","Manhwa",["Murim","Martial Arts","Regression"],["Time loop"],"Ongoing",2024,4.6,1,25,97],
-["Second Draft of a Hero","Light novel",["Isekai","System","Reincarnation","Comedy"],["Workplace"],"Ongoing",2025,4.1,8,10,75],
-["The Girls of Harbor Row","Light novel",["Harem","Romance","Comedy"],["Cozy"],"Completed",2020,3.8,420,800,30]
-]/*END*/;
-const TAX=/*TAX*/{"types":["Manga","Manhwa","Manhua","Webtoon","Western comic","Graphic novel","Light novel"],
-"genres":["Action","Adventure","Fantasy","Dark Fantasy","Martial Arts","Cultivation","Murim","Regression","Reincarnation","Isekai","Dungeon","System","Leveling","Overpowered Protagonist","Academy","Magic","Romance","Comedy","Drama","Thriller","Horror","Mystery","Psychological","Sci-Fi","Supernatural","Sports","Historical","Harem","Slice of Life"],
-"tags":["Slow burn","Found family","Time loop","Tournament arc","Antihero","Villainess","Workplace","Post-apocalyptic","Cozy","Revenge"]}/*END*/;
-let DATA=RAW.map((r,i)=>({id:i+1,t:r[0],type:r[1],genres:r[2],tags:r[3],s:r[4],y:r[5],r:r[6],upd:r[7],added:r[8],pop:r[9],h:(i*53)%360}));
-const SECTIONS=[
- {title:"Trending",note:"sample ranking",pick:d=>[...d].sort((a,b)=>b.pop-a.pop)},
- {title:"Popular",note:"sample ratings",pick:d=>[...d].sort((a,b)=>b.r-a.r)},
- {title:"Latest updates",note:"invented dates",pick:d=>[...d].sort((a,b)=>a.upd-b.upd),meta:x=>`Updated ${x.upd}d ago`},
- {title:"Recently added",note:"invented dates",pick:d=>[...d].sort((a,b)=>a.added-b.added)},
- {title:"Completed",note:"finished series",pick:d=>d.filter(x=>x.s==="Completed")},
- {title:"Recommended",note:"sample picks, not personalized",pick:d=>[13,14,6,2,8,1].map(i=>d.find(x=>x.id===i)).filter(Boolean)}
-];
-const F0=()=>({type:"All",genres:new Set(),tags:new Set(),status:"All",year:0,rating:0,sort:"rating",q:""});
-let view="home",F=F0(),open={genres:false,tags:false};
-const $=s=>document.querySelector(s),esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+nav.tabs button[aria-current=page]{color:var(--red);border-top-color:var(--red)}nav.tabs svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dialog-back{position:fixed;inset:0;background:rgba(0,0,0,.78);display:none;align-items:flex-end;justify-content:center;z-index:20;overflow:auto}.dialog-back.on{display:flex}.sheet{background:var(--surface);border-radius:20px 20px 0 0;max-width:620px;width:100%;max-height:88dvh;overflow:auto;padding:22px 20px calc(22px + env(safe-area-inset-bottom,0px));border:1px solid var(--line)}
+.sheet-top{display:grid;grid-template-columns:112px 1fr;gap:16px}.sheet-cover{width:112px;aspect-ratio:2/3;object-fit:cover;border-radius:10px;background:var(--raised)}.sheet h3{font:800 26px/1.1 var(--display);margin:0 0 6px}.sheet dl{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;margin:14px 0;color:var(--muted);font-size:14px}.sheet dd{margin:0;color:var(--text)}.sheet p{color:#d2d2d8}.note{font-size:13px;color:var(--muted);margin-top:12px}.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}.status{font-size:13px;color:var(--muted);padding:8px 0}.skeleton{height:190px;border-radius:10px;background:linear-gradient(100deg,#18181d 30%,#25252c 50%,#18181d 70%);background-size:200% 100%;animation:shine 1.5s infinite}.spinner{display:inline-block;width:15px;height:15px;border:2px solid #555;border-top-color:#fff;border-radius:50%;animation:spin .7s linear infinite;vertical-align:middle;margin-right:7px}
+@keyframes shine{to{background-position:-200% 0}}@keyframes spin{to{transform:rotate(360deg)}}
+@media(min-width:700px){.row .card{width:156px}.hero{min-height:360px;padding:34px}.sheet{align-self:center;border-radius:20px;margin:20px}.dialog-back{align-items:center}}
+@media(max-width:430px){header .wrap{gap:8px}.logo{font-size:20px}.logo i{width:24px;height:24px}.search input{padding:0 12px}.sheet-top{grid-template-columns:88px 1fr;gap:12px}.sheet-cover{width:88px}.sheet h3{font-size:22px}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="banner" id="banner">Connecting to AniList…</div>
+<header><div class="wrap"><button class="logo" aria-label="Yomira home"><i>Y</i>Yomira</button><label class="search"><span style="position:absolute;left:-9999px">Search manga</span><input id="q" type="search" placeholder="Search manga, manhwa…" autocomplete="off" aria-label="Search manga"></label></div></header>
+<main class="wrap" id="main" aria-live="polite"><div class="panel"><span class="spinner"></span>Loading the manga catalog…</div></main>
+<nav class="tabs" id="tabs" aria-label="Primary"></nav>
+<div class="dialog-back" id="dlg" role="dialog" aria-modal="true" aria-label="Manga details"><div class="sheet" id="sheet"></div></div>
+<script>
+"use strict";
+const API="https://graphql.anilist.co";
+const TAX={types:["Manga","Manhwa","Manhua","Light novel","Other"],genres:["Action","Adventure","Comedy","Drama","Fantasy","Horror","Mahou Shoujo","Mecha","Music","Mystery","Psychological","Romance","Sci-Fi","Slice of Life","Sports","Supernatural","Thriller"],statuses:["Ongoing","Completed","Hiatus","Cancelled"]};
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
 const ICON={home:'<path d="M3 11l9-8 9 8v10h-6v-6H9v6H3z"/>',discover:'<circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/>',library:'<path d="M5 4h4v16H5zM11 4h4v16h-4zM17 6l4 1-3 13-4-1z"/>',profile:'<circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/>'};
-function card(x,meta){const bg=`linear-gradient(160deg,hsl(${x.h} 22% 20%),hsl(${x.h} 18% 8%))`;
- return `<button class="card" data-id="${x.id}" aria-label="${esc(x.t)}, ${x.type}, sample title"><div class="cover" style="background:${bg}"><span class="tag">${x.type}</span><b>${esc(x.t)}</b></div><div class="meta"><strong>${esc(x.t)}</strong>${meta?meta(x):`★ ${x.r.toFixed(1)} · ${x.y}`}</div></button>`}
-function match(x){const q=F.q.trim().toLowerCase();
- return (F.type==="All"||x.type===F.type)&&(F.status==="All"||x.s===F.status)&&x.y>=F.year&&x.r>=F.rating&&
- [...F.genres].every(g=>x.genres.includes(g))&&[...F.tags].every(g=>x.tags.includes(g))&&
- (!q||x.t.toLowerCase().includes(q)||x.genres.some(g=>g.toLowerCase().includes(q))||x.tags.some(g=>g.toLowerCase().includes(q)))}
-const active=()=>JSON.stringify([F.type,[...F.genres],[...F.tags],F.status,F.year,F.rating,F.q.trim()])!==JSON.stringify(["All",[],[],"All",0,0,""]);
-function chips(list,sel,key,limit){const show=limit&&!open[key]?list.slice(0,limit):list;
- return `<div class="chips wrapped">${show.map(g=>`<button class="chip" data-f="${key}" data-v="${esc(g)}" aria-pressed="${sel.has(g)}">${esc(g)}</button>`).join("")}</div>`+(limit&&list.length>limit?`<button class="link" data-more="${key}">${open[key]?"Show fewer":`Show all ${list.length}`}</button>`:"")}
+let DATA=[],view="home",queryText="",searchTimer=null,searchToken=0,loading=false,loadError="",selected=null;
+let F={type:"All",genres:new Set(),status:"All",year:0,rating:0,sort:"popular"};
+const savedKey="yomira-library-v1";
+function readSaved(){try{return JSON.parse(localStorage.getItem(savedKey)||"{}")}catch{return {}}}
+let SAVED=readSaved();
+function persistSaved(){try{localStorage.setItem(savedKey,JSON.stringify(SAVED));return true}catch{return false}}
+function gqlTitle(m){return m?.title?.english||m?.title?.romaji||m?.title?.native||"Untitled"}
+function normalize(m){const country=m.countryOfOrigin;let type="Manga";if(m.format==="NOVEL")type="Light novel";else if(country==="KR")type="Manhwa";else if(country==="CN")type="Manhua";else if(!["JP","KR","CN"].includes(country))type="Other";
+ const status=({RELEASING:"Ongoing",FINISHED:"Completed",HIATUS:"Hiatus",CANCELLED:"Cancelled"})[m.status]||"Unknown";
+ return {id:m.id,t:gqlTitle(m),native:m.title?.native||"",romaji:m.title?.romaji||"",english:m.title?.english||"",type,genres:m.genres||[],tags:(m.tags||[]).filter(t=>t.rank>=60).slice(0,8).map(t=>t.name),s:status,y:m.startDate?.year||0,r:(m.averageScore||0)/10,score:m.averageScore||0,pop:m.popularity||0,cover:m.coverImage?.extraLarge||m.coverImage?.large||"",chapters:m.chapters??null,volumes:m.volumes??null,description:m.description||"",format:m.format||"Unknown",country,updated:m.updatedAt||0,source:"AniList"}}
+const SEARCH_FIELDS=`id title { english romaji native } format status countryOfOrigin startDate { year } averageScore popularity genres tags { name rank } coverImage { large extraLarge } chapters volumes description updatedAt`;
+async function requestCatalog({search="",sort="TRENDING_DESC",page=1,perPage=30}={}){
+ const filters=`type:MANGA, sort:${sort}, isAdult:false`;
+ const args=search?`search:${JSON.stringify(search)}, type:MANGA, sort:${sort}, isAdult:false`:`${filters}`;
+ const query=`query { Page(page:${page},perPage:${perPage}) { pageInfo { currentPage hasNextPage total } media(${args}) { ${SEARCH_FIELDS} } } }`;
+ const res=await fetch(API,{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify({query})});
+ if(!res.ok)throw new Error(res.status===429?"AniList rate limit reached. Wait a moment and retry.":`AniList returned HTTP ${res.status}.`);
+ const json=await res.json();if(json.errors?.length)throw new Error(json.errors[0].message||"AniList query failed.");
+ return {items:(json.data?.Page?.media||[]).map(normalize),pageInfo:json.data?.Page?.pageInfo};
+}
+function unique(items){const seen=new Set();return items.filter(x=>!seen.has(x.id)&&seen.add(x.id))}
+async function initialLoad(){
+ loading=true;loadError="";render();
+ try{const result=await requestCatalog({sort:"TRENDING_DESC",page:1,perPage:50});DATA=result.items;loading=false;$("#banner").textContent=`Live catalog · ${DATA.length} manga entries loaded from AniList`;render()}
+ catch(e){loading=false;loadError=e.message||"Could not load AniList.";$("#banner").textContent="Catalog connection failed";render()}
+}
+function card(x,meta=""){
+ const cover=x.cover?`background-image:linear-gradient(0deg,rgba(0,0,0,.35),transparent 55%),url("${esc(x.cover)}")`:`background-image:linear-gradient(160deg,hsl(${(x.id*47)%360} 22% 20%),#101013)`;
+ return `<button class="card" data-id="${x.id}" aria-label="View ${esc(x.t)}"><div class="cover" style="${cover}"><span class="tag">${esc(x.type)}</span>${x.cover?"":`<b>${esc(x.t)}</b>`}</div><div class="meta"><strong>${esc(x.t)}</strong>${meta||`★ ${x.r?x.r.toFixed(1):"N/A"} · ${x.y||"Year unknown"}`}</div></button>`
+}
+function match(x){const q=queryText.trim().toLowerCase();return(F.type==="All"||x.type===F.type)&&(F.status==="All"||x.s===F.status)&&(!F.year||x.y>=F.year)&&x.r>=F.rating&&[...F.genres].every(g=>x.genres.includes(g))&&(!q||[x.t,x.romaji,x.native,x.english,...x.genres,...x.tags].some(s=>String(s||"").toLowerCase().includes(q)))}
+function chips(list,sel,key,limit){return `<div class="chips wrapped">${list.map(g=>`<button class="chip" data-filter="${key}" data-value="${esc(g)}" aria-pressed="${sel.has(g)}">${esc(g)}</button>`).join("")}</div>`}
 function typeChips(){return `<div class="chips" role="group" aria-label="Content type">${["All",...TAX.types].map(t=>`<button class="chip" data-type="${t}" aria-pressed="${F.type===t}">${t}</button>`).join("")}</div>`}
-function discover(){const list=match&&DATA.filter(match);
- list.sort((a,b)=>F.sort==="title"?a.t.localeCompare(b.t):F.sort==="year"?b.y-a.y:F.sort==="pop"?b.pop-a.pop:b.r-a.r);
+function section(title,note,items){return `<section><div class="sh"><h2>${esc(title)}</h2><span>${esc(note)}</span></div>${items.length?`<div class="row">${items.map(x=>card(x)).join("")}</div>`:`<div class="empty">No titles to show in this section yet.</div>`}</section>`}
+function home(){
+ if(loading&&!DATA.length)return `<div class="panel"><span class="spinner"></span>Loading real manga from AniList…</div>`;
+ if(!DATA.length)return `<div class="hero"><div class="hero-in"><small>Yomira catalog</small><h1>Your next read starts here.</h1><p>Discover manga and manhwa using real public metadata.</p><button class="btn" id="retry">Retry connection</button></div></div><div class="empty">${esc(loadError||"No catalog loaded.")}</div>`;
+ const trend=[...DATA].sort((a,b)=>b.pop-a.pop),popular=[...DATA].sort((a,b)=>b.r-a.r),updated=[...DATA].filter(x=>x.updated).sort((a,b)=>b.updated-a.updated),recent=[...DATA].filter(x=>x.y).sort((a,b)=>b.y-a.y),complete=DATA.filter(x=>x.s==="Completed");
+ const feature=trend[0]||DATA[0];
+ return `<div class="hero" style="${feature.cover?`background-image:linear-gradient(180deg,rgba(11,11,13,.1) 5%,rgba(11,11,13,.97) 100%),url('${esc(feature.cover)}')`:""}"><div class="hero-in"><small>Featured · AniList</small><h1>${esc(feature.t)}</h1><p>${esc(stripHtml(feature.description)||`${feature.type} · ${feature.genres.slice(0,3).join(" · ")||"Explore the catalog"}`)}</p><button class="btn" data-id="${feature.id}">View details</button><button class="btn ghost" data-view="discover">Explore manga</button></div></div>
+ ${typeChips()}${section("Trending","Popularity ranking",trend.slice(0,18))}${section("Highest rated","Community scores",popular.slice(0,18))}${section("Recently updated","Based on AniList metadata",updated.slice(0,18))}${section("Recently published","Newest publication years",recent.slice(0,18))}${section("Completed","Finished series",complete.slice(0,18))}
+ <p class="note">Metadata provided by AniList. Popularity and scores reflect AniList data, not Yomira ratings.</p>`
+}
+function stripHtml(s){const d=document.createElement("div");d.innerHTML=s||"";return(d.textContent||d.innerText||"").replace(/\s+/g," ").trim()}
+function discover(){
+ const list=DATA.filter(match).sort((a,b)=>F.sort==="title"?a.t.localeCompare(b.t):F.sort==="year"?b.y-a.y:F.sort==="rating"?b.r-a.r:b.pop-a.pop);
  const yrs=[0,2026,2024,2022,2020,2015];
- return `<h1 style="font:800 30px var(--display);margin:18px 0 4px">Discover</h1><div class="note" style="margin:0 0 8px">Filters run on invented sample data. The filter model is built to be reused with real sources later.</div>
- ${typeChips()}
- <div class="panel"><h3>Genres (match all)</h3>${chips(TAX.genres,F.genres,"genres",12)}<h3>Tags (match all)</h3>${chips(TAX.tags,F.tags,"tags",6)}
- <h3>Status</h3><div class="chips wrapped">${["All","Ongoing","Completed","Hiatus"].map(s=>`<button class="chip" data-status="${s}" aria-pressed="${F.status===s}">${s}</button>`).join("")}</div>
+ return `<h1 style="font:800 30px var(--display);margin:18px 0 4px">Discover</h1><div class="note" style="margin:0 0 8px">Filter the loaded AniList catalog, or search for more titles using the search bar.</div>${typeChips()}
+ <div class="panel"><h3>Genres (match all)</h3>${chips(TAX.genres,F.genres,"genres")}
+ <h3>Status</h3><div class="chips wrapped">${["All",...TAX.statuses].map(s=>`<button class="chip" data-status="${s}" aria-pressed="${F.status===s}">${s}</button>`).join("")}</div>
  <div class="fr"><label>Year from <select data-sel="year">${yrs.map(y=>`<option value="${y}" ${F.year===y?"selected":""}>${y||"Any"}</option>`).join("")}</select></label>
- <label>Min rating <select data-sel="rating">${[0,3.5,4,4.5].map(y=>`<option value="${y}" ${F.rating===y?"selected":""}>${y?y+"+":"Any"}</option>`).join("")}</select></label>
- <label>Sort <select data-sel="sort">${[["rating","Highest rated"],["pop","Most popular"],["year","Newest year"],["title","Title A to Z"]].map(o=>`<option value="${o[0]}" ${F.sort===o[0]?"selected":""}>${o[1]}</option>`).join("")}</select></label>
- <button class="link" id="reset" ${active()?"":"disabled"}>Reset filters</button></div></div>
- <strong>${list.length} sample ${list.length===1?"result":"results"}</strong><div class="grid" style="margin-top:12px">${list.map(x=>card(x)).join("")}</div>
- ${list.length?"":`<div class="empty">No sample titles match these filters. Remove a genre or tag, or reset everything.<br><button class="btn" id="reset2">Reset filters</button></div>`}`}
-function home(){const list=DATA.filter(x=>F.type==="All"||x.type===F.type);
- return `<div class="hero"><div class="hero-in"><small>Sample feature</small><h1>Lantern Tide</h1><p>A harbor town lights one lantern per lost ship. This year, a lantern lights itself. (Invented blurb.)</p><button class="btn" data-id="1">View details</button><button class="btn ghost" disabled>Reader not built yet</button></div></div>
- ${typeChips()}`+SECTIONS.map(s=>{const it=s.pick(list);return `<section><div class="sh"><h2>${s.title}</h2><span>${s.note}</span></div>${it.length?`<div class="row">${it.map(x=>card(x,s.meta)).join("")}</div>`:`<div class="empty">No ${F.type} titles in this sample section.</div>`}</section>`}).join("")+
- `<section><div class="panel"><strong>Customizable homepage (planned)</strong><div class="note">Later you will be able to reorder or hide sections like these. It is not built yet; the order above is fixed.</div></div></section>`}
-const stub=(t,d)=>`<h1 style="font:800 30px var(--display);margin:18px 0 8px">${t}</h1><div class="empty">${d}</div>`;
+ <label>Min score <select data-sel="rating">${[0,3,3.5,4,4.5].map(y=>`<option value="${y}" ${F.rating===y?"selected":""}>${y?y.toFixed(1)+"+":"Any"}</option>`).join("")}</select></label>
+ <label>Sort <select data-sel="sort">${[["popular","Popularity"],["rating","Highest score"],["year","Newest year"],["title","Title A–Z"]].map(o=>`<option value="${o[0]}" ${F.sort===o[0]?"selected":""}>${o[1]}</option>`).join("")}</select></label><button class="link" id="reset">Reset filters</button></div></div>
+ <strong>${list.length} loaded result${list.length===1?"":"s"}</strong><div class="grid" style="margin-top:12px">${list.map(x=>card(x)).join("")}</div>${list.length?"":`<div class="empty">No loaded titles match. Try a search to fetch more from AniList, or reset filters.</div>`}
+ <div class="panel"><button class="btn" id="loadMore" ${loading?"disabled":""}>${loading?'<span class="spinner"></span>Loading…':'Load more popular manga'}</button><p class="note">Loads another page of public metadata from AniList.</p></div>`
+}
+function library(){
+ const ids=Object.keys(SAVED).filter(id=>SAVED[id]?.saved||SAVED[id]?.progress>0);
+ const items=ids.map(id=>DATA.find(x=>String(x.id)===id)||SAVED[id].snapshot).filter(Boolean);
+ return `<h1 style="font:800 30px var(--display);margin:18px 0 8px">My Library</h1><p class="note">Bookmarks and progress are stored in this browser on this device. They are not synced to other devices.</p>${items.length?`<div class="grid">${items.map(x=>`<div>${card(x)}<div class="fr"><button class="chip" data-save="${x.id}">${SAVED[x.id]?.saved?"Remove bookmark":"Bookmark"}</button><label class="note">Progress <select data-progress="${x.id}">${[0,1,5,10,20,30,40,50,60,70,80,90,100].map(n=>`<option value="${n}" ${+(SAVED[x.id]?.progress||0)===n?"selected":""}>${n}%</option>`).join("")}</select></label></div><div class="bar"><span style="width:${+(SAVED[x.id]?.progress||0)}%"></span></div></div>`).join("")}</div>`:`<div class="empty">Your library is empty. Open a manga and bookmark it to keep it here.</div>`}`
+}
+function profile(){return `<h1 style="font:800 30px var(--display);margin:18px 0 8px">Profile</h1><div class="panel"><h3>Yomira status</h3><p>Free static website · no account required.</p><p class="note">Bookmarks and progress stay in this browser. Login, cloud sync, and cross-device profiles need a backend and are not enabled in this version.</p><h3>Data source</h3><p><a href="https://anilist.co" target="_blank" rel="noopener noreferrer">AniList</a> provides catalog metadata. Yomira is an independent project and is not affiliated with AniList.</p><button class="btn ghost" id="retry">Refresh catalog</button></div>`}
 function render(){
- $("#main").innerHTML=view==="home"?home():view==="discover"?discover():view==="library"?stub("Library","Planned. Bookmarks, favorites, custom lists and reading history need accounts and a backend, which are not built yet. Nothing is saved here.<div class='bar'><span style='width:0'></span></div><div class='note'>Reading progress bars will appear here (0% placeholder).</div>"):stub("Profile","Planned. Sign-in, profiles and synced settings are not implemented, so there is no account to create yet.");
- $("#tabs").innerHTML=[["home","Home"],["discover","Discover"],["library","Library"],["profile","Profile"]].map(t=>`<button data-view="${t[0]}" ${view===t[0]?'aria-current="page"':""}><svg viewBox="0 0 24 24" aria-hidden="true">${ICON[t[0]]}</svg>${t[1]}</button>`).join("")}
-function sheet(id){const x=DATA.find(d=>d.id==id);if(!x)return;
- $("#sheet").innerHTML=`<h3>${esc(x.t)}</h3><div>${x.type} · sample title</div><dl><dt>Genres</dt><dd>${x.genres.join(", ")}</dd><dt>Tags</dt><dd>${x.tags.join(", ")||"None"}</dd><dt>Status</dt><dd>${x.s}</dd><dt>Year</dt><dd>${x.y}</dd><dt>Rating</dt><dd>★ ${x.r.toFixed(1)} (invented)</dd></dl><button class="btn" id="closeDlg">Close</button><p class="note">No chapters exist for this title. Reading features come later.</p>`;
- $("#dlg").classList.add("on");$("#closeDlg").focus()}
-const tog=(s,v)=>s.has(v)?s.delete(v):s.add(v);
-document.addEventListener("click",e=>{const g=s=>e.target.closest(s);let c;
+ const main=$("#main");
+ if(view==="home")main.innerHTML=home();
+ else if(view==="discover")main.innerHTML=discover();
+ else if(view==="library")main.innerHTML=library();
+ else main.innerHTML=profile();
+ $("#tabs").innerHTML=[["home","Home"],["discover","Discover"],["library","Library"],["profile","Profile"]].map(t=>`<button data-view="${t[0]}" ${view===t[0]?'aria-current="page"':""}><svg viewBox="0 0 24 24" aria-hidden="true">${ICON[t[0]]}</svg>${t[1]}</button>`).join("");
+}
+function sheet(id){
+ const x=DATA.find(d=>String(d.id)===String(id))||SAVED[id]?.snapshot;if(!x)return;selected=x;
+ const entry=SAVED[x.id]||{saved:false,progress:0};const desc=stripHtml(x.description);
+ $("#sheet").innerHTML=`<div class="sheet-top">${x.cover?`<img class="sheet-cover" src="${esc(x.cover)}" alt="Cover of ${esc(x.t)}" referrerpolicy="no-referrer">`:`<div class="sheet-cover"></div>`}<div><h3>${esc(x.t)}</h3><div class="note">${esc(x.romaji&&x.romaji!==x.t?x.romaji+" · ":"")}${esc(x.type)} · ${esc(x.format)}</div><p>${esc(desc||"No description is available from AniList.")}</p></div></div><dl><dt>Genres</dt><dd>${esc(x.genres.join(", ")||"Not listed")}</dd><dt>Tags</dt><dd>${esc((x.tags||[]).join(", ")||"Not listed")}</dd><dt>Status</dt><dd>${esc(x.s)}</dd><dt>Year</dt><dd>${x.y||"Unknown"}</dd><dt>AniList score</dt><dd>${x.r?`★ ${x.r.toFixed(1)} / 10`:"Not rated"}</dd><dt>Popularity</dt><dd>${Number(x.pop||0).toLocaleString()}</dd><dt>Chapters</dt><dd>${x.chapters??"Unknown"}</dd><dt>Volumes</dt><dd>${x.volumes??"Unknown"}</dd></dl><div class="actions"><button class="btn" data-save="${x.id}">${entry.saved?"★ Bookmarked":"☆ Add to library"}</button><label class="note">Reading progress <select id="sheetProgress" data-progress="${x.id}">${[0,1,5,10,20,30,40,50,60,70,80,90,100].map(n=>`<option value="${n}" ${+(entry.progress||0)===n?"selected":""}>${n}%</option>`).join("")}</select></label><a class="btn ghost" href="https://anilist.co/manga/${x.id}" target="_blank" rel="noopener noreferrer">Open AniList</a><button class="btn ghost" id="closeDlg">Close</button></div><p class="note">Yomira currently provides discovery and local library features, not chapter image hosting. Chapter count is metadata only; it does not mean the chapters can be read here.</p>`;
+ $("#dlg").classList.add("on");$("#closeDlg").focus();
+}
+function saveTitle(id){
+ const key=String(id),x=DATA.find(d=>String(d.id)===key)||SAVED[key]?.snapshot;if(!x)return;
+ const old=SAVED[key]||{saved:false,progress:0};const now={...old,saved:!old.saved,snapshot:x};
+ if(!now.saved&&!(now.progress>0))delete SAVED[key];else SAVED[key]=now;
+ persistSaved();
+ if($("#dlg").classList.contains("on"))sheet(id);
+ render();
+}
+function setProgress(id,value){
+ const key=String(id),x=DATA.find(d=>String(d.id)===key)||SAVED[key]?.snapshot;if(!x)return;
+ const old=SAVED[key]||{saved:false,progress:0};const progress=Number(value)||0;
+ if(!old.saved&&progress===0)delete SAVED[key];else SAVED[key]={...old,progress,snapshot:x};
+ persistSaved();render();
+}
+async function doSearch(q){
+ const token=++searchToken;queryText=q;render();
+ if(!q.trim()){return}
+ loading=true;$("#banner").textContent="Searching AniList…";
+ try{
+  const result=await requestCatalog({search:q.trim(),sort:"SEARCH_MATCH",page:1,perPage:30});
+  if(token!==searchToken)return;
+  const found=result.items;
+  DATA=unique([...found,...DATA]);loading=false;
+  $("#banner").textContent=`Search complete · ${found.length} results from AniList`;
+  if(view!=="discover")view="discover";
+  render();
+ }catch(e){if(token!==searchToken)return;loading=false;$("#banner").textContent="Search could not connect";render();const msg=document.createElement("p");msg.className="note";msg.textContent=e.message;$("#main").prepend(msg)}
+}
+async function loadMore(){
+ if(loading)return;loading=true;render();
+ try{
+  const result=await requestCatalog({sort:"POPULARITY_DESC",page:2,perPage:30});
+  DATA=unique([...DATA,...result.items]);loading=false;$("#banner").textContent=`Catalog expanded · ${DATA.length} unique titles loaded`;render()
+ }catch(e){loading=false;$("#banner").textContent="Could not load more titles";render();alert(e.message)}
+}
+document.addEventListener("click",async e=>{
+ const g=s=>e.target.closest(s);let c;
  if(c=g("[data-id]")){sheet(c.dataset.id);return}
- if(c=g("[data-view]")){view=c.dataset.view;render();scrollTo(0,0);return}
- if(g(".logo")){view="home";F=F0();$("#q").value="";render();return}
- if(c=g("[data-type]")){F.type=c.dataset.type}
- else if(c=g("[data-status]")){F.status=c.dataset.status}
- else if(c=g("[data-f]")){tog(F[c.dataset.f],c.dataset.v)}
- else if(c=g("[data-more]")){open[c.dataset.more]=!open[c.dataset.more]}
- else if(g("#reset")||g("#reset2")){F=F0();$("#q").value=""}
- else{if(e.target.id==="closeDlg"||e.target.id==="dlg")$("#dlg").classList.remove("on");return}
- render()});
-document.addEventListener("change",e=>{const k=e.target.dataset.sel;if(!k)return;F[k]=k==="sort"?e.target.value:+e.target.value;render()});
-document.addEventListener("keydown",e=>{if(e.key==="Escape")$("#dlg").classList.remove("on");if(e.key==="/"&&!/INPUT|SELECT/.test(document.activeElement.tagName)){e.preventDefault();$("#q").focus()}});
-$("#q").addEventListener("input",e=>{F.q=e.target.value;if(F.q&&view!=="discover")view="discover";render()});
-render();
-</script></body></html>
+ if(c=g("[data-view]")){view=c.dataset.view;render();window.scrollTo(0,0);return}
+ if(g(".logo")){view="home";queryText="";$("#q").value="";F={type:"All",genres:new Set(),status:"All",year:0,rating:0,sort:"popular"};render();window.scrollTo(0,0);return}
+ if(c=g("[data-type]")){F.type=c.dataset.type;render();return}
+ if(c=g("[data-status]")){F.status=c.dataset.status;render();return}
+ if(c=g("[data-filter]")){const set=F[c.dataset.filter];set.has(c.dataset.value)?set.delete(c.dataset.value):set.add(c.dataset.value);render();return}
+ if(c=g("[data-save]")){saveTitle(c.dataset.save);return}
+ if(c=g("#retry")){initialLoad();return}
+ if(c=g("#loadMore")){loadMore();return}
+ if(c=g("#reset")){F={type:"All",genres:new Set(),status:"All",year:0,rating:0,sort:"popular"};render();return}
+ if(c=g("#closeDlg")||e.target.id==="dlg"){if(e.target.id==="closeDlg"||e.target.id==="dlg")$("#dlg").classList.remove("on");return}
+});
+document.addEventListener("change",e=>{
+ if(e.target.dataset.progress){setProgress(e.target.dataset.progress,e.target.value);return}
+ const k=e.target.dataset.sel;if(!k)return;F[k]=k==="sort"?e.target.value:Number(e.target.value);render();
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape")$("#dlg").classList.remove("on");if(e.key==="/"&&!/INPUT|SELECT|TEXTAREA/.test(document.activeElement.tagName)){e.preventDefault();$("#q").focus()}});
+$("#q").addEventListener("input",e=>{
+ const q=e.target.value;queryText=q;
+ clearTimeout(searchTimer);
+ if(!q.trim()){searchToken++;queryText="";render();return}
+ searchTimer=setTimeout(()=>{doSearch(q)},550);
+});
+initialLoad();
+</script>
+</body>
+</html>
